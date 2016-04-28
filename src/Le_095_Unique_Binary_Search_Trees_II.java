@@ -27,12 +27,12 @@ public class Le_095_Unique_Binary_Search_Trees_II {
     public List<TreeNode> helper(int start, int end){
         List<TreeNode> ans = new ArrayList<TreeNode>();
         if(start > end){
-            ans.add(null);
+            ans.add(null);        // 这步很重要！！！  test case: [1]
             return ans;
         } else if(memo[start][end] != null){
             return memo[start][end];
         }
-        
+       
         for(int i = start; i <= end; ++i){
             List<TreeNode> leftTree = helper(start, i - 1);
             List<TreeNode> rightTree = helper(i + 1, end);

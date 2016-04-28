@@ -1,5 +1,5 @@
 
-public class LI_087_Remove_Node_in_Binary_Search_Tree {
+public class Li_087_Remove_Node_in_Binary_Search_Tree {
 	/*********************************************************************
 	 * BST中删除一个结点的步骤：
 	 *  (1). 设立一个dummy结点，防止所要删除的结点为root结点
