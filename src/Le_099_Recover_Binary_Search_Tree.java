@@ -26,9 +26,9 @@ public class Le_099_Recover_Binary_Search_Tree {
         travel(node.left);
         if(firstElement == null && node.val < preElement.val){  // 找到第一个元素
             firstElement = preElement;
-        } 
+        }                                                       // 注意，这里用firstElement != null
         if(firstElement != null && node.val < preElement.val){  // 找到第二个元素, 不用else, 防止[0, 1]的情况
-            secondElement = node;     // 此处不可以用return，因为不用else，因此两个if有可能在同一次递归里调用
+            secondElement = node;     // 此处不可以用return，因为不用else，因此两个if有可能在同一次递归里被调用
         }
         preElement = node;    // 执行完后才进行preElement的update， 等同于操作之后，进行node = node.next
         travel(node.right);

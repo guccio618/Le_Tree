@@ -27,7 +27,7 @@ public class Le_297_Serialize_and_Deserialize_Binary_Tree {
                 builder.append(node.val).append(",");
                 q.offer(node.left);
                 q.offer(node.right);
-                lastPos = builder.length() - 2;  // node.val所在的字符位置
+                lastPos = builder.length() - 2;  // node.val所在的字符位置, 只记录有效的字符位置，null时不记录
             } else {
                 builder.append("#,");
             }
@@ -44,7 +44,7 @@ public class Le_297_Serialize_and_Deserialize_Binary_Tree {
         
         String[] array = data.split(",");
         int n = array.length;
-        if(array[0].equals("#")){
+        if(array[0].equals("#")){   // 此处需要做非空判断
             return null;
         }
         TreeNode root = new TreeNode(Integer.parseInt(array[0]));

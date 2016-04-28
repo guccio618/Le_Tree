@@ -20,8 +20,8 @@ public class Le_124_Binary_Tree_Maximum_Path_Sum {
         }
         int leftPath = maxPathHelper(node.left);
         int rightPath = maxPathHelper(node.right);
-        maxPath = Math.max(maxPath, leftPath + node.val + rightPath);
-        return Math.max(0, Math.max(leftPath, rightPath) + node.val);  // 任意结点到另一结点的距离，因此可以只取root
+        maxPath = Math.max(maxPath, leftPath + node.val + rightPath);  // 任意结点到另一结点的距离，因此可以只取root
+        return Math.max(0, Math.max(leftPath, rightPath) + node.val);  // 如果当前结点的sum为负，可以考虑丢弃，使用0代替
     }
 	
 	

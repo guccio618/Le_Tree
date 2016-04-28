@@ -20,7 +20,7 @@ public class Li_087_Remove_Node_in_Binary_Search_Tree {
         } else if (parent.right != null && parent.right.val == value) {   // 要删除的结点是parent的右子树
             node = parent.right;
         } else {
-            return dummy.left;
+            return dummy.left;                                            // 没找到
         }
         
         deleteNode(parent, node);
