@@ -5,6 +5,8 @@ import java.util.Stack;
  *  (2). 当node > stack.peek()时，表示到了右子树
  *  (3). currentLow记录当前为止最小的值，如果后续结点小于此值，表示不是合法的遍历顺序
  * 
+ *  follow up 中用preorder数组模拟栈的形式	
+ * 
  **************************************************************************/
 
 public class Le_255_Verify_Preorder_Sequence_in_Binary_Search_Tree {
