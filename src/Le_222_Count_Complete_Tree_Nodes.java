@@ -13,8 +13,8 @@ public class Le_222_Count_Complete_Tree_Nodes {
         
         int leftHeight = getHeight(root.left);
         int rightHeight = getHeight(root.right);
-        int count = 1;
-        
+        int count = 1;                             // 这里的count初始值为1, 因为最后一个叶子节点，left = right ＝ 0，
+        										   // 不会在循环while被计算，因此需要在count里赋 1  ！！！      
         while(leftHeight > 0 || rightHeight > 0){
             if(leftHeight > rightHeight){
                 count += 1 << (rightHeight);
@@ -35,7 +35,7 @@ public class Le_222_Count_Complete_Tree_Nodes {
         if(node == null){
             return 0;
         }
-        return getHeight(node.left) + 1;
+        return getHeight(node.left) + 1;    // 完全二叉树树高取决于左子树高，因此不需要再计算右子树高，重复计算 ！！！
     }
 	
 	

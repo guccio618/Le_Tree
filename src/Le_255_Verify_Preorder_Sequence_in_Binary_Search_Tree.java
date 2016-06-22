@@ -17,7 +17,6 @@ public class Le_255_Verify_Preorder_Sequence_in_Binary_Search_Tree {
 	        } 
 	        
 	        Stack<Integer> stack = new Stack<Integer>();
-	        int n = preorder.length;
 	        int currentLow = Integer.MIN_VALUE;
 	        
 	        for(int node : preorder){

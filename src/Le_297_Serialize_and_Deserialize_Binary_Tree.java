@@ -55,15 +55,15 @@ public class Le_297_Serialize_and_Deserialize_Binary_Tree {
         for(int i = 1; i < n; ++i){
             if(!array[i].equals("#")){
                 TreeNode node = new TreeNode(Integer.parseInt(array[i]));
-                if(i % 2 == 1){       // i为单数时，存放的为左子树位置
+                if(i % 2 == 1){                            // i为单数时，存放的为左子树位置,      注意这里用的是i而不是index !!!
                     list.get(index).left = node;
-                } else{               // i为复数时，存放的为右子树位置
+                } else{                                    // i为复数时，存放的为右子树位置
                     list.get(index).right = node;
                 }
-                list.add(node);      // !!!别忘记将新的node加入到list里
+                list.add(node);                            // !!!别忘记将新的node加入到list里
             }
             
-            if(i % 2 == 0){   // 无论当前字符是否为null，index++正常进行，因此不能置于 if(!array[i].equals("#")) 里
+            if(i % 2 == 0){                                // 无论当前字符是否为null，index++正常进行，因此不能置于 if(!array[i].equals("#")) 里
                 index++;
             }
         }
